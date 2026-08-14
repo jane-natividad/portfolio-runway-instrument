@@ -2,7 +2,7 @@
 
 An interactive portfolio and runway dashboard prototype for early-stage R&D organizations — one view of every program, gate, CRO, and budget against the runway, with scenario simulation built in.
 
-**[Live demo](#)** — works immediately, no API key or setup required.
+**[Live demo](https://portfolio-runway-instrument.vercel.app)** — works immediately, no API key or setup required.
 
 ## Who it's for
 
