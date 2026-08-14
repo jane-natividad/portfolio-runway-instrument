@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Discovery Operating System — cardiometabolic newco</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBFBFD;
+    --card:#FFFFFF;
+    --tint:#F5F5F7;
+    --line:#E3E3E6;
+    --line-2:#D2D2D7;
+    --ink:#1D1D1F;
+    --ink-2:#6E6E73;
+    --ink-3:#98989D;
+
+    /* accent — furniture only */
+    --blue:#0071E3;
+    --blue-soft:#EAF3FD;
+
+    /* status — the only colours that carry meaning */
+    --green:#1F9E55;
+    --green-soft:#E8F6ED;
+    --orange:#C77714;
+    --orange-soft:#FDF2E3;
+    --red:#D63A2E;
+    --red-soft:#FDECEA;
+    --grey:#D8D8DC;
+
+    --r:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    line-height:1.47;letter-spacing:-0.011em;
+    padding:36px 20px 90px;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px;margin:0 auto}
+
+  .eyebrow{
+    font-size:12px;font-weight:500;color:var(--ink-3);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:34px;
+  }
+  h1{
+    font-size:52px;line-height:1.06;font-weight:700;
+    letter-spacing:-0.028em;margin-bottom:18px;max-width:16ch;
+  }
+  h1 em{font-style:normal;color:var(--blue)}
+  .preface{
+    font-size:13.5px;line-height:1.6;color:var(--ink-3);max-width:70ch;
+    margin:14px 0 20px;padding-left:14px;border-left:2px solid var(--line);
+  }
+  .preface b{color:var(--ink-2);font-weight:600}
+
+  .lede{
+    font-size:19px;line-height:1.5;color:var(--ink-2);max-width:56ch;
+    letter-spacing:-0.012em;
+  }
+  .lede b{color:var(--ink);font-weight:600}
+
+  .honest{
+    margin:24px 0 40px;padding:16px 18px;
+    background:var(--blue-soft);border-radius:var(--r);max-width:74ch;
+  }
+  .honest span{font-size:12px;font-weight:600;color:var(--blue);display:block;margin-bottom:7px}
+  .honest p{font-size:14.5px;line-height:1.55;color:var(--ink)}
+  .honest p b{font-weight:600}
+
+  .sec-lab{
+    font-size:12px;font-weight:600;color:var(--ink-3);
+    text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;
+  }
+  .scenarios{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+  .sc{
+    background:var(--card);border:1px solid var(--line-2);color:var(--ink-2);
+    font-family:inherit;font-size:14px;font-weight:500;letter-spacing:-0.01em;
+    padding:11px 18px;cursor:pointer;border-radius:980px;
+    transition:all .2s cubic-bezier(.4,0,.2,1);text-align:left;line-height:1.3;
+  }
+  .sc:hover{border-color:var(--ink-3);color:var(--ink)}
+  .sc:focus-visible{outline:3px solid rgba(0,113,227,.4);outline-offset:2px}
+  .sc.on{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 2px 10px rgba(0,113,227,.22)}
+  .sc small{display:block;font-size:11.5px;font-weight:400;opacity:.65;margin-top:1px}
+  .sc-note{font-size:15px;color:var(--ink-2);margin-bottom:34px;min-height:24px;max-width:74ch;line-height:1.5}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:34px}
+  .kpi{padding:20px 22px;background:var(--card);border-radius:var(--r);border:1px solid var(--line)}
+  .kpi.hero{border-color:transparent;box-shadow:0 1px 3px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.05)}
+  .kpi h4{
+    font-size:12px;font-weight:600;color:var(--ink-3);margin-bottom:12px;
+    text-transform:uppercase;letter-spacing:.055em;
+  }
+  .kpi .val{
+    font-size:34px;font-weight:600;letter-spacing:-0.03em;line-height:1;
+    transition:color .3s;font-variant-numeric:tabular-nums;
+  }
+  .kpi .sub{font-size:13px;color:var(--ink-2);margin-top:9px;line-height:1.4}
+  .v-ok{color:var(--green)} .v-warn{color:var(--orange)} .v-risk{color:var(--red)} .v-neutral{color:var(--ink)}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin-bottom:34px;overflow:hidden}
+  .chead{
+    padding:18px 22px;border-bottom:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;
+  }
+  .chead h3{font-size:17px;font-weight:600;letter-spacing:-0.015em}
+  .chead .hint{font-size:13px;color:var(--ink-3)}
+  .cbody{padding:22px}
+
+  .grow{display:grid;grid-template-columns:160px 1fr;gap:18px;align-items:center;padding:9px 0}
+  .gname{font-size:14px;font-weight:600;letter-spacing:-0.01em}
+  .gstage{font-size:12px;color:var(--ink-3);margin-top:1px}
+  .track{position:relative;height:40px;background:var(--tint);border-radius:6px}
+  .seg{
+    position:absolute;top:4px;height:20px;border-radius:5px;
+    display:flex;align-items:center;padding:0 10px;
+    font-size:11.5px;font-weight:500;color:#fff;
+    white-space:nowrap;overflow:hidden;letter-spacing:-0.005em;
+    transition:left .45s cubic-bezier(.4,0,.2,1), width .45s cubic-bezier(.4,0,.2,1), background .35s;
+  }
+  .s-ok{background:var(--green)}
+  .s-warn{background:var(--orange)}
+  .s-risk{background:var(--red)}
+  .s-dim{background:var(--grey);color:#8A8A8E}
+  .seg.lead{box-shadow:inset 0 0 0 2px rgba(0,0,0,.16)}
+  .gt{
+    position:absolute;top:2px;width:0;height:36px;
+    border-left:2px dashed var(--ink-3);
+    transition:left .45s cubic-bezier(.4,0,.2,1);
+  }
+  .gt::after{
+    content:attr(data-g);position:absolute;top:24px;left:5px;
+    font-size:10px;font-weight:600;color:var(--ink-2);white-space:nowrap;
+  }
+  .runway{
+    position:absolute;top:-3px;bottom:-3px;width:0;
+    border-left:2px solid var(--red);z-index:3;
+    transition:left .45s cubic-bezier(.4,0,.2,1);
+  }
+  .axis{
+    display:grid;grid-template-columns:160px 1fr;gap:18px;
+    margin-top:12px;padding-top:12px;border-top:1px solid var(--line);
+  }
+  .ticks{display:flex;justify-content:space-between}
+  .ticks span{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+  .legend{
+    display:flex;gap:20px;flex-wrap:wrap;margin-top:18px;padding-top:16px;
+    border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-2);
+  }
+  .legend span{display:flex;align-items:center;gap:7px}
+  .sw{width:11px;height:11px;display:inline-block;border-radius:3px}
+  .sw.lead{box-shadow:inset 0 0 0 2px rgba(0,0,0,.22)}
+  .sw.dash{width:2px;height:13px;border-radius:0;background:none;border-left:2px dashed var(--ink-3)}
+  .sw.solid{width:2px;height:13px;border-radius:0;background:var(--red)}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:34px}
+  .cols .card{margin-bottom:0}
+
+  table{width:100%;border-collapse:collapse}
+  th{
+    font-size:11.5px;font-weight:600;color:var(--ink-3);text-align:left;
+    text-transform:uppercase;letter-spacing:.055em;
+    padding:0 10px 11px 0;border-bottom:1px solid var(--line);
+  }
+  th:last-child,td:last-child{text-align:right;padding-right:0}
+  td{font-size:14px;padding:12px 10px 12px 0;border-bottom:1px solid var(--line)}
+  tr:last-child td{border-bottom:none}
+  td.m{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+  .pill{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:980px;display:inline-block}
+  .p-ok{background:var(--green-soft);color:var(--green)}
+  .p-warn{background:var(--orange-soft);color:var(--orange)}
+  .p-risk{background:var(--red-soft);color:var(--red)}
+
+  .res{margin-bottom:17px}
+  .rlab{display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px}
+  .rlab .n{font-weight:500}
+  .rlab .v{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+  .rbar{height:8px;background:var(--tint);position:relative;border-radius:980px}
+  .rfill{
+    position:absolute;left:0;top:0;bottom:0;border-radius:980px;background:var(--green);
+    transition:width .45s cubic-bezier(.4,0,.2,1), background .35s;
+  }
+  .rfill.warn{background:var(--orange)}
+  .rfill.over{background:var(--red)}
+  .rcap{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink);border-radius:2px}
+  .rfoot{font-size:13px;color:var(--ink-2);margin-top:16px;line-height:1.5}
+  .rfoot b{color:var(--ink);font-weight:600}
+
+  .board{
+    background:var(--card);border-radius:var(--r);padding:26px 28px;
+    box-shadow:0 1px 3px rgba(0,0,0,.05),0 10px 30px rgba(0,0,0,.05);margin-bottom:34px;
+  }
+  .board h3{font-size:17px;font-weight:600;margin-bottom:18px;letter-spacing:-0.015em}
+  .bline{display:flex;gap:18px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.5}
+  .bline:last-child{border-bottom:none;padding-bottom:0}
+  .bline .k{
+    font-size:12px;font-weight:600;color:var(--ink-3);min-width:78px;
+    text-transform:uppercase;letter-spacing:.055em;padding-top:4px;flex-shrink:0;
+  }
+  .bline .t b{font-weight:600}
+
+  .foot{margin-top:56px;padding-top:34px;border-top:1px solid var(--line-2)}
+  .foot h3{font-size:32px;font-weight:700;letter-spacing:-0.024em;margin-bottom:16px;line-height:1.12}
+  .foot h3 em{font-style:normal;color:var(--blue)}
+  .foot p{font-size:16px;line-height:1.6;color:var(--ink-2);max-width:72ch;margin-bottom:13px}
+  .foot p b{color:var(--ink);font-weight:600}
+  .foot p i{font-style:italic}
+  .sig{
+    margin-top:26px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--ink-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  }
+  .sig b{color:var(--ink);font-weight:600}
+
+  @media (max-width:880px){
+    .kpis{grid-template-columns:1fr 1fr}
+    .cols{grid-template-columns:1fr}
+    h1{font-size:36px}
+    .foot h3{font-size:26px}
+    .grow,.axis{grid-template-columns:104px 1fr;gap:11px}
+    .gname{font-size:12.5px}
+    .seg{font-size:10px;padding:0 6px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">
+    <span>Discovery Operating System · working prototype</span>
+    <span>Portfolio &amp; Runway Instrument · self-directed prototype</span>
+  </div>
+
+  <h1>The instrument a discovery newco <em>steers by</em></h1>
+
+  <div class="preface">
+    Jane Natividad · built to explore what a 360° portfolio and runway instrument for an early-stage R&amp;D
+    organization could look like — the kind of accountability tool leadership steers by. Rather than describe
+    it, I built a working example. The programmes below are invented; the way it works is real.
+  </div>
+
+  <p class="lede">
+    One plan. Every programme, gate, CRO and franc against the runway, built with AI-assisted analytics.
+    <b>What slips if we lose X?</b> Answerable in a click, not a week.
+  </p>
+
+  <div class="honest">
+    <span>Placeholder data</span>
+    <p>I don't have your programmes or targets yet. <b>This shows how I'd deliver, not what your plan is.</b> Give me the inputs, and you'd have your own version quickly.</p>
+  </div>
+
+  <div class="sec-lab">Scenario</div>
+  <div class="scenarios" role="group" aria-label="Portfolio scenarios">
+    <button class="sc on" data-s="0">Baseline<small>plan of record</small></button>
+    <button class="sc" data-s="1">In-vivo CRO slips 6 weeks<small>the call you dread</small></button>
+    <button class="sc" data-s="2">Stop Programme D<small>reallocate to A and B</small></button>
+    <button class="sc" data-s="3">Parallelise DMPK<small>spend CHF 180k to buy time</small></button>
+  </div>
+  <p class="sc-note" id="scNote"></p>
+
+  <div class="kpis">
+    <div class="kpi hero">
+      <h4>Runway cover at candidate</h4>
+      <div class="val" id="k1">—</div>
+      <div class="sub" id="k1s"></div>
+    </div>
+    <div class="kpi">
+      <h4>Candidate selection</h4>
+      <div class="val v-neutral" id="k2">—</div>
+      <div class="sub">Lead programme</div>
+    </div>
+    <div class="kpi">
+      <h4>Runway</h4>
+      <div class="val v-neutral" id="k3">—</div>
+      <div class="sub" id="k3s"></div>
+    </div>
+    <div class="kpi">
+      <h4>Gates at risk</h4>
+      <div class="val v-neutral" id="k4">—</div>
+      <div class="sub">Outside runway</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="chead">
+      <h3>Master plan</h3>
+      <span class="hint">Red line = end of runway</span>
+    </div>
+    <div class="cbody">
+      <div id="gantt"></div>
+      <div class="axis">
+        <div></div>
+        <div class="ticks">
+          <span>M0</span><span>M6</span><span>M12</span><span>M18</span><span>M24</span><span>M30</span>
+        </div>
+      </div>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--green)"></i>Funded</span>
+        <span><i class="sw" style="background:var(--orange)"></i>Tight</span>
+        <span><i class="sw" style="background:var(--red)"></i>Unfunded</span>
+        <span><i class="sw" style="background:var(--grey)"></i>Stopped</span>
+        <span><i class="sw lead" style="background:var(--green)"></i>Critical path</span>
+        <span><i class="sw dash"></i>Gate</span>
+        <span><i class="sw solid"></i>Runway ends</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div class="card">
+      <div class="chead"><h3>CRO network</h3><span class="hint">No internal lab</span></div>
+      <div class="cbody">
+        <table>
+          <thead><tr><th>Workstream</th><th>Country</th><th>Status</th></tr></thead>
+          <tbody id="croBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="chead"><h3>Resource gap</h3><span class="hint">Demand vs. capacity</span></div>
+      <div class="cbody" id="resBody"></div>
+    </div>
+  </div>
+
+  <div class="board">
+    <h3>Board view</h3>
+    <div class="bline"><span class="k">Headline</span><span class="t" id="b1"></span></div>
+    <div class="bline"><span class="k">Decision</span><span class="t" id="b2"></span></div>
+    <div class="bline"><span class="k">Risk</span><span class="t" id="b3"></span></div>
+    <div class="bline"><span class="k">Ask</span><span class="t" id="b4"></span></div>
+  </div>
+
+  <div class="foot">
+    <h3>What I'd need <em>in week one</em></h3>
+    <p>
+      The programmes and their gate criteria. The CRO contracts. The budget and the burn.
+      <b>That's it — the instrument already exists.</b>
+    </p>
+    <div class="sig">
+      <span>Built in a weekend · deliberately opens in the red</span>
+      <span><b>Jane Natividad, PhD</b> · jane.natividad@gmail.com · linkedin.com/in/jane-natividad</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  const H = 30;
+  const pct = m => (m / H) * 100;
+  const TIGHT = 2.0; // months of cover below which a gate is "tight"
+
+  const base = {
+    budget: 12.0,
+    burn: 0.640,
+    programmes: [
+      { id:'A', name:'Programme A', stage:'Lead optimisation',
+        segs:[{s:0,e:12,t:'Lead optimisation'},{s:12,e:20,t:'Candidate selection'}],
+        gate:{m:20,label:'CS'}, lead:true },
+      { id:'B', name:'Programme B', stage:'Hit-to-lead',
+        segs:[{s:0,e:9,t:'Hit-to-lead'},{s:9,e:24,t:'Lead optimisation'}],
+        gate:{m:9,label:'LO entry'} },
+      { id:'C', name:'Programme C', stage:'Hit identification',
+        segs:[{s:0,e:8,t:'Hit ID'},{s:8,e:20,t:'Hit-to-lead'}],
+        gate:{m:8,label:'H2L'} },
+      { id:'D', name:'Programme D', stage:'Target validation',
+        segs:[{s:0,e:14,t:'Target validation'}],
+        gate:{m:14,label:'TV'} }
+    ],
+    cros:[
+      { n:'Medicinal chemistry', c:'CN', s:'ok' },
+      { n:'In vitro pharmacology', c:'DE', s:'ok' },
+      { n:'DMPK / ADME', c:'UK', s:'warn' },
+      { n:'In vivo efficacy', c:'CH', s:'ok' },
+      { n:'Safety / tox', c:'NL', s:'ok' },
+      { n:'Compound management', c:'CH', s:'ok' }
+    ],
+    res:[ {n:'Chemistry', d:82}, {n:'Biology', d:95}, {n:'DMPK', d:118}, {n:'Pharmacology', d:71} ]
+  };
+
+  const scenarios = [
+    { note:'The lead reaches candidate 1.3 months after the money runs out.',
+      apply: p => p },
+    { note:'A slip costs no money. It costs runway — the dearer currency. The gap widens to 2.7 months.',
+      apply: p => {
+        p.programmes[0].segs[1].e += 1.4; p.programmes[0].gate.m += 1.4; p.programmes[0].slip = true;
+        p.programmes[1].segs[1].e += 1.0;
+        p.programmes[3].segs[0].e += 3.0; p.programmes[3].gate.m += 3.0;
+        p.cros[3].s = 'risk'; p.cros[2].s = 'risk';
+        p.res[2].d = 132;
+        return p;
+      }},
+    { note:'Buys five months of cover on the lead. Raise on a candidate, not a promise.',
+      apply: p => {
+        p.programmes[3].stopped = true;
+        p.burn = 0.505;
+        p.programmes[0].segs[1].e -= 1.5; p.programmes[0].gate.m -= 1.5;
+        p.programmes[1].segs[1].e -= 0.8;
+        p.res = [ {n:'Chemistry', d:74}, {n:'Biology', d:80}, {n:'DMPK', d:88}, {n:'Pharmacology', d:62} ];
+        return p;
+      }},
+    { note:'CHF 180k may be wasted. The 2.5 months it buys are the difference between funded and not.',
+      apply: p => {
+        p.budget = 11.82;
+        p.programmes[0].segs[1].e -= 2.5; p.programmes[0].gate.m -= 2.5;
+        p.cros[2].s = 'ok';
+        p.res[2].d = 96;
+        return p;
+      }}
+  ];
+
+  const clone = o => JSON.parse(JSON.stringify(o));
+  const CAP = 100;
+
+  // health of a programme = how much runway cover its next gate has
+  function health(pr, runway){
+    if (pr.stopped) return 'dim';
+    const cover = runway - pr.gate.m;
+    if (cover < 0) return 'risk';
+    if (cover < TIGHT) return 'warn';
+    return 'ok';
+  }
+
+  function render(idx){
+    const p = scenarios[idx].apply(clone(base));
+
+    const runway = p.budget / p.burn;
+    const csM    = p.programmes[0].gate.m;
+    const cover  = runway - csM;
+    const atRisk = p.programmes.filter(x => !x.stopped && x.gate.m > runway).length;
+
+    const cls = cover < 0 ? 'v-risk' : (cover < TIGHT ? 'v-warn' : 'v-ok');
+    const k1 = document.getElementById('k1');
+    k1.textContent = (cover >= 0 ? '+' : '−') + Math.abs(cover).toFixed(1) + ' mo';
+    k1.className = 'val ' + cls;
+    document.getElementById('k1s').textContent =
+      cover < 0 ? 'Lands after the money runs out'
+                : (cover < TIGHT ? 'Inside runway, no margin'
+                                 : 'Inside the funded window');
+
+    document.getElementById('k2').textContent = 'M' + csM.toFixed(1);
+    document.getElementById('k3').textContent = runway.toFixed(1) + ' mo';
+    document.getElementById('k3s').textContent = 'CHF ' + p.budget.toFixed(2) + 'm @ ' + (p.burn*1000).toFixed(0) + 'k/mo';
+    const k4 = document.getElementById('k4');
+    k4.textContent = atRisk;
+    k4.className = 'val ' + (atRisk > 0 ? 'v-risk' : 'v-ok');
+
+    document.getElementById('scNote').textContent = scenarios[idx].note;
+
+    let g = '';
+    p.programmes.forEach(pr => {
+      const h = health(pr, runway);
+      const segCls = 's-' + h;
+      g += '<div class="grow"><div><div class="gname">' + pr.name + '</div>' +
+           '<div class="gstage">' + (pr.stopped ? 'Stopped' : pr.stage) + '</div></div><div class="track">';
+      pr.segs.forEach(s => {
+        g += '<div class="seg ' + segCls + (pr.lead && !pr.stopped ? ' lead' : '') +
+             '" style="left:' + pct(s.s) + '%;width:' + pct(s.e - s.s) + '%">' + s.t + '</div>';
+      });
+      if (!pr.stopped) g += '<div class="gt" data-g="' + pr.gate.label + '" style="left:' + pct(pr.gate.m) + '%"></div>';
+      g += '<div class="runway" style="left:' + pct(runway) + '%"></div></div></div>';
+    });
+    document.getElementById('gantt').innerHTML = g;
+
+    const pill = { ok:['p-ok','On track'], warn:['p-warn','Watch'], risk:['p-risk','Slipped'] };
+    document.getElementById('croBody').innerHTML = p.cros.map(c =>
+      '<tr><td>' + c.n + '</td><td class="m">' + c.c + '</td>' +
+      '<td><span class="pill ' + pill[c.s][0] + '">' + pill[c.s][1] + '</span></td></tr>'
+    ).join('');
+
+    document.getElementById('resBody').innerHTML = p.res.map(r => {
+      const k = r.d > CAP ? 'over' : (r.d > CAP - 12 ? 'warn' : '');
+      const w = Math.min(r.d, 145) / 145 * 100;
+      const capPos = CAP / 145 * 100;
+      return '<div class="res"><div class="rlab"><span class="n">' + r.n + '</span>' +
+        '<span class="v">' + r.d + '% of capacity</span></div>' +
+        '<div class="rbar"><div class="rfill ' + k + '" style="width:' + w + '%"></div>' +
+        '<div class="rcap" style="left:' + capPos + '%"></div></div></div>';
+    }).join('') +
+    '<p class="rfoot">Black line = internal capacity. Past it is a hire or a CRO — <b>renting is reversible, hiring is not.</b></p>';
+
+    const b = id => document.getElementById(id);
+    if (cover >= 0) {
+      b('b1').innerHTML = 'Lead programme reaches candidate selection at <b>M' + csM.toFixed(1) +
+        '</b>, <b>' + cover.toFixed(1) + ' months inside</b> the funded window.';
+      b('b2').innerHTML = 'None this quarter. Hold the plan.';
+      b('b3').innerHTML = atRisk === 0
+        ? 'No gate outside runway. Watch DMPK.'
+        : '<b>' + atRisk + '</b> gate(s) still outside runway.';
+      b('b4').innerHTML = 'Nothing. Next report at the gate.';
+    } else {
+      b('b1').innerHTML = 'Lead programme reaches candidate selection at <b>M' + csM.toFixed(1) +
+        '</b> — <b>' + Math.abs(cover).toFixed(1) + ' months after</b> the money runs out.';
+      b('b2').innerHTML = 'Stop a programme, spend to parallelise, or raise on weaker data. <b>Doing nothing is the expensive option.</b>';
+      b('b3').innerHTML = '<b>' + atRisk + '</b> gate(s) fall outside the funded window.';
+      b('b4').innerHTML = 'Decide at this board. Every month of delay costs CHF ' +
+        (p.burn * 1000).toFixed(0) + 'k and buys nothing.';
+    }
+  }
+
+  document.querySelectorAll('.sc').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.sc').forEach(b => b.classList.remove('on'));
+      btn.classList.add('on');
+      render(+btn.dataset.s);
+    });
+  });
+
+  render(0);
+})();
+</script>
+</body>
+</html>
