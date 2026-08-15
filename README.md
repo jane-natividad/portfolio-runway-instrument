@@ -31,4 +31,4 @@ Early-stage R&D organizations run multiple competing programs against a fixed ru
 
 ## Status
 
-This is a prototype built to explore a problem space, using illustrative/placeholder data — not a finished product and not tied to any specific organization's real programs. Built by [Jane Natividad](https://github.com/jane-natividad).
+This is a prototype built to explore a problem space, using illustrative/placeholder data — not a finished product and not tied to any specific organization's real programs. Built by [Jane Natividad](https://github.com/jane-natividad) — see more at [jane-natividad.github.io](https://jane-natividad.github.io).
